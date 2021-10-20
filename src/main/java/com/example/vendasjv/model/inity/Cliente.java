@@ -8,12 +8,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
+import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-import org.hibernate.annotations.Persister;
 import org.hibernate.validator.constraints.br.CPF;
-import org.springframework.data.annotation.Persistent;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -27,6 +26,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Table(name="cliente")
 public class Cliente {
 	
 	@Id
